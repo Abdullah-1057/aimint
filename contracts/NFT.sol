@@ -13,11 +13,11 @@ contract NFT is ERC721URIStorage {
     uint256 public cost;
 
     constructor(
-        string memory _name,
+        string memory _name, //set name and symbol using arguments 
         string memory _symbol,
         uint256 _cost
     ) ERC721(_name, _symbol) {
-        owner = msg.sender;
+        owner = msg.sender;//owner and cost not used by arguments
         cost = _cost;
     }
 
